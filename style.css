@@ -1,57 +1,77 @@
-/* *{
-    margin: 0;
-    padding: 0;
-} */
- body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #FFDE63;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dacccc;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
- }
- .todo{
-    background-color: #FEFFC4;
-    padding: 50px;
-    margin: auto;
-    text-align: center;
+}
+
+.container {
+    background: rgb(255, 255, 255);
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0,0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
- }
- h1{
-    color: #113F67;
 }
-.input-section{
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-section {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
 }
-#taskInput{
+
+#taskInput {
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-#AddTaskBtn{
+
+#addTaskBtn {
     padding: 10px 20px;
-    background-color: #2df82d;
-    color: #000000;
+    background-color: #28a745;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
-#AddTaskBtn:hover{
-    background-color: rgba(31, 224, 31, 0.898);
-   
+
+#addTaskBtn:hover {
+    background-color: #5922ff;
+    font-weight: bold;
 }
-#tasks{
+
+#taskList {
     list-style: none;
-    padding: 10px;
+    padding: 0;
 }
-#clearAll{
+
+#taskList li {
+    padding: 10px;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+    font-style: italic;
+}
+
+
+#clearAllBtn {
     width: 100%;
     padding: 10px;
     background-color: #dc3545;
@@ -61,6 +81,26 @@
     margin-top: 10px;
     cursor: pointer;
 }
-#clearAll:hover{
-    background-color: #dc2333;
+
+#clearAllBtn:hover {
+    background-color: #c82333;
+}
+
+.filter-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.filterBtn {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+.filterBtn.active {
+    background: #28a745;
+    color: white;
 }
